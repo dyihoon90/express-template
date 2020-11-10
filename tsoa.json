@@ -1,0 +1,78 @@
+{
+  "entryFile": "./src/server.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "controllerPathGlobs": ["./src/app/**/*.controller.ts"],
+  "spec": {
+    "host": "localhost:3000",
+    "basePath": "/hrps/api/v2/",
+    "outputDirectory": "swagger",
+    "specVersion": 3
+  },
+  "routes": {
+    "routesDir": "build"
+  },
+  "decoratorsSchema": {
+    "controllersDecorators": [
+      {
+        "name": "Route",
+        "tsoaDecorator": "Route"
+      },
+      {
+        "name": "Controller",
+        "tsoaDecorator": "Route"
+      },
+      {
+        "name": "JsonController",
+        "tsoaDecorator": "Route"
+      }
+    ],
+    "methodDecorators": [
+      {
+        "name": "get",
+        "tsoaDecorator": "get"
+      },
+      {
+        "name": "post",
+        "tsoaDecorator": "post"
+      },
+      {
+        "name": "patch",
+        "tsoaDecorator": "patch"
+      },
+      {
+        "name": "delete",
+        "tsoaDecorator": "delete"
+      },
+      {
+        "name": "put",
+        "tsoaDecorator": "put"
+      }
+    ],
+    "parameterDecorators": [
+      {
+        "name": "Request",
+        "tsoaDecorator": "Request"
+      },
+      {
+        "name": "Body",
+        "tsoaDecorator": "Body"
+      },
+      {
+        "name": "BodyProp",
+        "tsoaDecorator": "BodyProp"
+      },
+      {
+        "name": "Header",
+        "tsoaDecorator": "Header"
+      },
+      {
+        "name": "Query",
+        "tsoaDecorator": "Query"
+      },
+      {
+        "name": "Param",
+        "tsoaDecorator": "Path"
+      }
+    ]
+  }
+}
